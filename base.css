@@ -1,0 +1,141 @@
+body{
+  display: grid;
+  grid-template-areas: 
+  "header header header header header" 
+  "aside main main main main"
+  "aside main main main main";
+  grid-template-columns: auto auto auto auto auto; 
+  grid-template-rows: auto 100vh auto auto auto; 
+  box-sizing: border-box;
+}
+
+#header{
+  grid-area: header;
+  display: grid;
+}
+
+.menu__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-youtube-left{
+  flex: 1;
+  padding: 15px 45px;
+}
+
+.pesquisar__input{
+  width: 260px;
+  height: 32px;
+  border: 1px solid rgb(211, 211, 211);
+  font-size: 16px;
+  padding: 3px 8px;
+}
+
+.pesquisar__label{
+  background-image: url(/imagens/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid rgb(211, 211, 211);
+  background-color: #F9F9F9;
+  border-left: none;
+  padding: 6px 18px 7px;
+  cursor: pointer;
+  justify-items: center;
+}
+
+.pesquisar_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.cabecalho__icones__item {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cabecalho__videos{
+  background-image: url(/imagens/video.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+.cabecalho__notificacoes{
+  background-image: url(/imagens/bell.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 13px 30px 13px 13px;
+}
+
+.cabecalho__avatar{
+  background-image: url(/imagens/icone-perfil.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 13px 30px 13px 13px;
+  border-radius: 60px;
+}
+
+.menu_aside{
+  grid-area: aside;
+}
+
+ul > li{
+  list-style: none;
+}
+
+.menu__items li:nth-child(n)
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 75px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.menu__container {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9999;
+}
+
+.menu_aside {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 157px;
+  height: 100%;
+  z-index: 9999;
+  padding: 10px 5px;
+}
+
+.main_container{
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.videos__container{
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 1px 20px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+} 
